@@ -10,10 +10,7 @@
 				Dim product
 				product = n1 * n2
 
-				' the following block evaluates the GCD
-				' of the two numbers
 				Do
-					' swap the items so that n1 >= n2
 					If n1 < n2 Then
 						tmp = n1
 						n1 = n2
@@ -23,8 +20,6 @@
 					n1 = n1 Mod n2
 				Loop While n1
 
-				' now n2 contains the GCD of the two numbers
-				' The LCM is equal to (n1*n2) \ GCD(n1,n2)
 				LCM = product \ n2
 			End Function
 
@@ -32,13 +27,11 @@
 				Dim tmp
 
 				Do
-					' swap the items so that n1 >= n2
 					If n1 < n2 Then
 						tmp = n1
 						n1 = n2
 						n2 = tmp
 					End If
-					' take the modulo
 					n1 = n1 Mod n2
 				Loop While n1
 
