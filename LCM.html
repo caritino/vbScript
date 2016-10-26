@@ -1,0 +1,66 @@
+<HTML>
+	<HEAD>
+		<meta http-equiv="x-ua-compatible" content="IE=10">
+	</HEAD>
+
+	<BODY>
+		<script type = "text/vbscript">
+			Function LCM(n1, n2)
+				Dim tmp
+				Dim product
+				product = n1 * n2
+
+				' the following block evaluates the GCD
+				' of the two numbers
+				Do
+					' swap the items so that n1 >= n2
+					If n1 < n2 Then
+						tmp = n1
+						n1 = n2
+						n2 = tmp
+					End If
+					' take the modulo
+					n1 = n1 Mod n2
+				Loop While n1
+
+				' now n2 contains the GCD of the two numbers
+				' The LCM is equal to (n1*n2) \ GCD(n1,n2)
+				LCM = product \ n2
+			End Function
+
+			Function GCD(n1,n2) 
+				Dim tmp
+
+				Do
+					' swap the items so that n1 >= n2
+					If n1 < n2 Then
+						tmp = n1
+						n1 = n2
+						n2 = tmp
+					End If
+					' take the modulo
+					n1 = n1 Mod n2
+				Loop While n1
+
+				GCD = n2
+			End Function
+
+			Dim n1
+			Dim n2
+			Dim op
+			Dim result
+			n1 = InputBox("Please enter the first number")
+			n2 = InputBox("Please enter the first number")
+			op = InputBox("Enter 1 to get the LCM of two numbers" & vbcrlf & "Enter 2 to get the GCD of two numbers")
+			
+			Select Case op
+			Case 1
+				result = LCM(n1,n2)
+				MsgBox(result)
+			Case 2
+				result = GCD(n1,n2)
+				MsgBox(result)
+			End Select
+		</script>
+	</BODY>
+</HTML>
