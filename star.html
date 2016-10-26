@@ -1,0 +1,46 @@
+
+<HTML>
+	<HEAD>
+		<meta http-equiv="x-ua-compatible" content="IE=10">
+	</HEAD>
+
+	<BODY>
+		<script type = "text/vbscript">
+			Dim star
+			Dim j
+			Dim i
+			Dim counter
+			Dim max
+			star = "*"
+			max = 5
+			counter = 1
+			
+			For i = 0 to max
+				For j = i to max
+					document.write(star)
+				Next
+				document.write("<br />")
+			Next
+			
+			document.write("<br />")
+			
+			For i = 0 to max step 1
+				For j = 0 to i step 1
+					document.write(counter)
+					counter = counter + 1
+				Next
+				document.write("<br />")
+			Next
+			
+			document.write("<br />")
+			
+			For i = 1 to max step 1
+				For j = 1 to i step 1
+					document.write(j)
+				Next				
+				document.write("<br />")
+			Next
+			
+		</script>
+	</BODY>
+</HTML>

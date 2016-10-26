@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta http-equiv="x-ua-compatible" content="IE=10">
+	</HEAD>
+
+	<BODY>
+		<script type = "text/vbscript">
+			Dim word
+			Dim wordNoSpace
+			Dim reverse
+			
+			word = InputBox("Enter the word")
+			wordNoSpace = UCase(Replace(word," ",""))
+			reverse = StrReverse(wordNoSpace)
+			
+			if wordNoSpace = reverse then
+				MsgBox("Palindrome")
+			End If
+		</script>
+	</BODY>
+</HTML>
